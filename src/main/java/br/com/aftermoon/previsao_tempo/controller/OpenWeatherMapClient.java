@@ -16,7 +16,7 @@ import br.com.aftermoon.previsao_tempo.view.InterfaceClient;
 
 public class OpenWeatherMapClient {
 	//chave api
-	private static final String API_KEY = "418f421fceac868c247c7181098f2a6a";
+	private static final String API_KEY = "YOUR API KEY";
 	//url base do site
 	private static final String BASE_URL = "http://api.openweathermap.org/data/2.5/weather";
     
