@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- Identificação do projeto -->
+  <groupId>br.com.aftermoon</groupId>
+  <artifactId>previsao-tempo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <!-- Nome do projeto e URL (personalizável) -->
+  <name>previsao-tempo</name>
+  <url>http://www.example.com</url>
+
+  <!-- Propriedades do projeto -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>17</maven.compiler.source>  <!-- Usei Java 17, ajustável para 21 se necessário -->
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
+
+  <!-- Dependências do projeto -->
+  <dependencies>
+  
+  	<dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-math3</artifactId>
+        <version>3.6.1</version> <!-- Você pode verificar por versões mais recentes -->
+    </dependency>
+    
+    <!-- Dependência para testes -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version> <!-- Atualizei o JUnit para uma versão mais recente -->
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Dependência para fazer requisições HTTP -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.13</version>
+    </dependency>
+
+    <!-- Dependência para manipulação de JSON -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.12.3</version>
+    </dependency>
+ </dependencies>
+
+  <!-- Configuração do Build -->
+  <build>
+    <plugins>
+      <!-- Plugin para compilar o projeto com Java -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <!-- Repositórios (caso haja problemas de conexão) -->
+  <repositories>
+    <repository>
+      <id>central</id>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+  </repositories>
+
+</project>
